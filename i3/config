@@ -107,6 +107,14 @@ bindsym $mod+Shift+space floating toggle
 # bindsym $mod+space focus mode_toggle
 
 # Setup rofi
+
+#set $bg-color 	         #2f343f
+#set $inactive-bg-color   #2f343f
+#set $text-color          #f3f4f5
+#set $inactive-text-color #676E7D
+#set $urgent-bg-color     #E53935
+
+# bindsym $mod+space exec rofi -show combi -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "JetBrainsMono Nerd Font Mono 10"
 bindsym $mod+space exec rofi -show combi
 
 # focus the parent container
@@ -212,7 +220,3 @@ for_window [class="SpringToolSuite4"] move to workspace $ws2
 for_window [class="Chromium"] move to workspace $ws3
 for_window [class="Thunar"] move to workspace $ws4
 for_window [class="Postman"] move to workspace $ws5
-
-
-
-

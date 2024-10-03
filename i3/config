@@ -195,6 +195,9 @@ bar {
 # Turn off the laptop display
 exec_always xrandr --output eDP-1 --off
 
+# Set the resolution of external display through HDMI to 2560x1440
+exec_always xrandr --output HDMI-2 --mode 2560x1440
+
 # Keyboard layout
 exec setxkbmap sv
 
@@ -202,13 +205,15 @@ exec setxkbmap sv
 exec_always picom -f
 
 # Setup Wallpaper
-exec --no-startup-id feh --randomize --bg-scale ~/.config/i3/wallpapers/*
+exec --no-startup-id feh --randomize --bg-fill ~/.config/i3/wallpapers/*
 
 # Assign programs to workspaces
 for_window [class="Alacritty"] move to workspace $ws1
 for_window [class="Code"] move to workspace $ws1
 for_window [class="jetbrains-idea-ce"] move to workspace $ws2
 for_window [class="SpringToolSuite4"] move to workspace $ws2
+for_window [class="Eclipse"] move to workspace $ws2
 for_window [class="Chromium"] move to workspace $ws3
+for_window [class="Brave-browser"] move to workspace $ws3
 for_window [class="Thunar"] move to workspace $ws4
 for_window [class="Postman"] move to workspace $ws5

@@ -24,7 +24,7 @@ packages=(
  	bash-completion
 	unzip
 	zip
-    rofi
+    	rofi
 	materia-gtk-theme
 	docker
 	docker-compose
@@ -37,9 +37,7 @@ packages=(
 pacman -Syu --noconfirm
 
 # Install packages from the array
-for package in "${packages[@]}"; do
-    pacman -S --noconfirm "$package"
-done
+pacman -S --noconfirm "${packages[@]}"
 
 # Install SDK
 curl -s "https://get.sdkman.io" | bash
@@ -51,7 +49,7 @@ echo "Package installation complete."
 systemctl enable bluetooth
 
 # Remove unwanted packages
-pacman --Rncs xterm
+pacman --Rns xterm
 
 # Remove unused packages
 pacman -Scc --noconfirm

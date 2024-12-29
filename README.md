@@ -22,23 +22,23 @@ ping www.archlinux.org
 
 I have installed the below packages manually
 
-waybar
-ttf-font-awesome
-starship
-podman
-podman-compose
-git
-github-cli
-zip
-unzip
-chromium
-neovim
+* waybar
+* ttf-font-awesome
+* starship
+* podman
+* podman-compose
+* git
+* github-cli
+* zip
+* unzip
+* chromium
+* neovim
 
 Here are the other AUR packages installed using makepkg -si command
 
-intellij
-code
-brave
+* intellij
+* code
+* brave
 
 
 

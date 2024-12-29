@@ -33,6 +33,8 @@ I have installed the below packages manually
 * unzip
 * chromium
 * neovim
+* bash-completion
+* 
 
 Here are the other AUR packages installed using makepkg -si command
 

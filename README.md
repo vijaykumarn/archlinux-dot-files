@@ -28,6 +28,7 @@ I have installed the below packages manually
 * podman
 * podman-compose
 * git
+* less
 * github-cli
 * zip
 * unzip
@@ -43,4 +44,63 @@ Here are the other AUR packages installed using makepkg -si command
 * brave
 
 
+Here the configuration that should go into .gitconfig
 
+>> cat .gitconfig
+```
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	email = vijaykumarn
+	name = vijaykumarn
+[init]
+	defaultBranch = main
+[core]
+	excludesfile = /home/vikunalabs/.gitignore_global
+	editor = nvim
+```
+
+Here's content for .gitignore_global
+```
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+```

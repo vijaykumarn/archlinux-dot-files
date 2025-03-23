@@ -8,11 +8,20 @@ Install the basic graphics driver packages; see the script for the list of packa
 
 If installed through the archinstall, it will install the below packages along with the above graphics packages (as per ASUS laptop)
 
-ark
-dolphin
-kate
-konsole
-plasma-meta
-plasma-workshop
+* ark
+* dolphin
+* kate
+* konsole
+* plasma-meta
+* plasma-workshop
+
+For a minimum installation, install the below
+
+- plasma-desktop
+- sddm
+- kitty
+
+Start the service - `systemctl enable sddm.service`
+
 
 
